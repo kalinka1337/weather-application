@@ -1,0 +1,9 @@
+rootProject.name = 'WeatherApplication'
+include 'Weather-Application-App'
+include 'Weather-Application-Domain'
+include 'Weather-Application-Repository'
+include 'Weather-Application-Core'
+include 'Weather-Application-Domain:Weather-Application-In'
+findProject(':Weather-Application-Domain:Weather-Application-In')?.name = 'Weather-Application-In'
+include 'Weather-Application-In'
+
