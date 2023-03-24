@@ -1,6 +1,7 @@
 package com.meawallet;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.net.http.HttpHeaders;
@@ -8,16 +9,15 @@ import java.util.Optional;
 //import com.meawallet.WeatherRepository;
 
 
-
-@Service
+@Component
 public class WeatherService {
 
-    private final WeatherRepository weatherRepository;
+    private WeatherRepository weatherRepository;
 
-    @Autowired
-    public WeatherService(WeatherRepository weatherRepository) {
-        this.weatherRepository = weatherRepository;
-    }
+//    @Autowired
+//    public WeatherService(WeatherRepository weatherRepository) {
+//        this.weatherRepository = weatherRepository;
+//    }
 
     public Double getTemperature(Double latitude, Double longitude) {
         // Check if weather data exists in the cache

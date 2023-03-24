@@ -10,6 +10,12 @@ repositories {
 }
 
 dependencies {
+
+    implementation project(":Weather-Application-Repository")
+    implementation project(":Weather-Application-Domain")
+    implementation project(":Weather-Application-Core")
+    implementation project(":Weather-Application-In")
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 
