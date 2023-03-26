@@ -17,7 +17,7 @@ public class WeatherController {
     }
 
     @GetMapping("/weather")
-    public ResponseEntity<WeatherResponse> getWeather(@RequestParam Double lat, @RequestParam Double lon) {
+    public ResponseEntity<WeatherResponse> getWeather(@RequestParam Double lat, @RequestParam Double lon) throws Exception {
         Double temperature = weatherService.getTemperature(lat, lon);
         WeatherResponse response = new WeatherResponse(temperature);
         return ResponseEntity.ok(response);
